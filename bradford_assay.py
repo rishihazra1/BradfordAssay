@@ -1,20 +1,20 @@
 from set_baseline import set_default_baseline
-import input_validation
+from input_validation import get_y_or_no, get_float, get_int
 path = set_default_baseline()
-use_default = input_validation.get_valid_input_y_or_n("Use default baselines?")
+use_default = get_y_or_no("Use default baselines?")
 if use_default == "n":
     print("Program terminated.\n Edit baselines here: " + path)
     quit()
 print("Protein used: 5µL\n" + "Dilution of protein solution: 0.1\n")
-info_correct = input_validation.get_valid_input_y_or_n("Is the above information correct?")
+info_correct = get_y_or_no("Is the above information correct?")
 if info_correct == "n":
-    protein_used = input_validation.get_valid_input_float("Enter the amount of protein used (in µL).\n")    
-    dilution = input_validation.get_valid_input_float("Enter the dilution.")
+    protein_used = get_float("Enter the amount of protein used (in µL).\n")    
+    dilution = get_float("Enter the dilution.")
 else:
     protein_used = 5
     dilution = 0.1
 dilution_factor = (protein_used/20)*dilution
 print("dilution factor: " + dilution_factor)
-absorption = input_validation.get_valid_input_float("Enter absorption.\n")
+absorption = get_float("Enter absorption.\n")
 
 
