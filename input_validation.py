@@ -1,7 +1,6 @@
 def get_float(input_prompt):
     while True:
         input_holder = input(input_prompt)
-        print(type(input_holder))
         try:
             input_holder = float(input_holder)
             return input_holder
@@ -12,7 +11,6 @@ def get_float(input_prompt):
 def get_int(input_prompt):
     while True:
         input_holder = input(input_prompt)
-        print(type(input_holder))
         try:
             input_holder = int(input_holder)
             return input_holder
