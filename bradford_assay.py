@@ -24,17 +24,18 @@ else:
     protein_used = 5
     dilution = 0.1
 dilution_factor = (protein_used/20)*dilution
-print("dilution factor: " + str(dilution_factor))
+# print("dilution factor: " + str(dilution_factor))
 
 
 a, b, c = bradford_statistics.get_best_fit_line(x_terms, y_terms)  # values generated through numpy polyfit
-print("a = " + str(a) + "\nb = " + str(b) + "\nc = " + str(c))
 
 '''
-a = -0.506713304  # values from Excel LINEST function
-b = 1.773611243
-c = 0.002712555
+a = -0.506713304184884  # values from Excel LINEST function
+b = 1.773611242973140
+c = 0.002712554653342
 '''
+
+# print("a = " + str(a) + "\nb = " + str(b) + "\nc = " + str(c))
 
 index = 0
 end_loop = False
@@ -58,3 +59,4 @@ while True:
     if end_loop is True:
         break
     index += 1
+
