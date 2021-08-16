@@ -1,24 +1,24 @@
 def get_float(input_prompt):
     while True:
         input_holder = input(input_prompt)
-        print(type(input_holder))
         try:
             input_holder = float(input_holder)
             return input_holder
         except:
             ValueError
-            print("Invalid input. Enter valid input of type: " + "float" + "\n") 
+            if input_holder == "no":  # enables user to exit loops
+                return input_holder
+            print("Invalid input. Enter valid input of type: " + "float") 
 
 def get_int(input_prompt):
     while True:
         input_holder = input(input_prompt)
-        print(type(input_holder))
         try:
             input_holder = int(input_holder)
             return input_holder
         except:
             ValueError
-            print("Invalid input. Enter valid input of type: " + "int" + "\n")
+            print("Invalid input. Enter valid input of type: " + "int")
             
 def get_y_or_no(input_prompt):
     while True:
