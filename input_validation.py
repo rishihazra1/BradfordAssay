@@ -6,6 +6,8 @@ def get_float(input_prompt):
             return input_holder
         except:
             ValueError
+            if input_holder == "no":  # enables user to exit loops
+                return input_holder
             print("Invalid input. Enter valid input of type: " + "float") 
 
 def get_int(input_prompt):
